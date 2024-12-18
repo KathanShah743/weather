@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather.com</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f1e49c644d.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/jpg" href="image.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Funnel+Display:wght@300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nova+Square&family=Zen+Dots&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="header">
+        <ul class="sidebar">
+            <li onclick=hide()><a href="#"><i class="fa fa-xmark"></i></a></li>
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#input-box">Search</a></li>
+            <li><a href="#ppp">About</a></li>
+            <li><a href="#foott">Footer</a></li>
+        </ul>
+        <ul>
+            <li class="logoimg"><img src="output-onlinetools (2).png"></li>
+            <li class="bold">Weather.com</li>
+            <li class="hideNav"><a href="#">Home</a></li>
+            <li class="hideNav"><a href="#input-box">Search</a></li>
+            <li class="hideNav"><a href="#ppp">About</a></li>
+            <li class="hideNav"><a href="#foott">Footer</a></li>
+            <li class="showButton" onclick=show()><a href="#"><i class="fa fa-bars"></i></a></li>
+        </ul>
+    </nav>
+    <div class="search">
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Search any city..." autocomplete="off">
+            <button onclick=search()><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="result">
+        </div>
+    </div>
+    <div class="report">
+        <div class="val">Location:&nbsp&nbsp<div class="loc"></div>
+        </div>
+        <div class="val">Temperature:&nbsp&nbsp<div class="temp"></div>
+        </div>
+        <div class="val">Precipitation:&nbsp&nbsp<div class="prec"></div>
+        </div>
+        <div class="val">Humidity:&nbsp&nbsp<div class="hum"></div>
+        </div>
+        <div class="val">Wind Speed & Direction:&nbsp&nbsp<div class="wind"></div>
+        </div>
+        <div class="val">Last Updated:&nbsp&nbsp<div class="upd"></div>
+        </div>
+    </div>
+    <div class="about" id="aboutt">
+        <p id="ppp"><span class="biggie">ABOUT US:</span><br><br>
+            <span class="it">Weather.com</span> is a website that lets you view the weather in any city of the world.<br>Just type the name of your
+            city, and <span class="it">Weather.com</span> will do the rest.<br>
+        </p>
+        <img src="output-onlinetools (2).png">
+    </div>
+    <footer id="foott" class="border"></footer>
+    <footer class="border1"></footer>
+    <footer class="border"></footer>
+    <footer class="foot">
+        <p><img src="output-onlinetools (2).png"> <span class="big">Weather.com</span><br>Made by a member
+            of<br>KodeinKGP: Technology Web3.0 Society<br><a href="tnc/index.html" target="_blank" class="ul">Terms & Conditions</a>&nbsp&nbsp<a href="priv/index.html" target="_blank" class="ul">Privacy Policy</a></p>
+    </footer>
+    <footer>
+        <a class="soc" href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a class="soc" href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a class="soc" href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a class="soc" href="https://x.com" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a class="soc" href="#"><i class="fa fa-circle-arrow-up"></i></a>
+        
+    </footer>
+    <script src="search.js"></script>
+    <script>
+        function show() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hide() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>
