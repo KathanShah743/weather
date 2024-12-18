@@ -53,7 +53,7 @@ function disp(list) {
 function search() {
     report.style.display = "flex";
     const city = inputBox.value;
-    const link = 'http://api.weatherapi.com/v1/forecast.json?key=6d84be9a356b419394e95939241712&q='+city+'&days=1&aqi=no&alerts=no';
+    const link = 'https://api.weatherapi.com/v1/forecast.json?key=6d84be9a356b419394e95939241712&q='+city+'&days=1&aqi=no&alerts=no';
     fetch(link)
     .then(response => response.json())
     .then(data => {
