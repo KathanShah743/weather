@@ -57,7 +57,7 @@ function search() {
     fetch(link)
     .then(response => response.json())
     .then(data => {
-        if(data.error) alert(data.error.message);
+        if (data.error) alert(data.error.message);
         loc.innerHTML = data.location.name + ", " + data.location.region + ", " + data.location.country;
         temp.innerHTML = data.current.temp_c + "°C, " + data.current.condition.text;
         prec.innerHTML = data.current.precip_mm + "mm";
